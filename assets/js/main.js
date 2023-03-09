@@ -11,9 +11,7 @@ const submitbutton = document.getElementById("submit");
 
 submitbutton.addEventListener('click', function(){
     const kilometers = Number(document.querySelector('input[name="km"]').value);
-const userAge = document.getElementById("age").value;
-
-const CostPerKm = 0.21;
+const age = document.getElementById("age").value;
 
 let ticketprice = (kilometers * 0.21).toFixed(2);
 console.log (`ticket price: €${ticketprice}`)
@@ -21,15 +19,14 @@ console.log (`ticket price: €${ticketprice}`)
 const minorsprice = (ticketprice * 0.8).toFixed(2);
 const over65price = (ticketprice * 0.6).toFixed(2);
 
-if (userAge < 18) {
+if (age < 18) {
     ticketprice = minorsprice;
     console.log (`Il tuo prezzo col 20% di sconto: €${minorsprice}`);
-} else if (userAge >=65) {
+} else if (age >=65) {
     ticketprice = over65price;
     console.log (`Il tuo prezzo col 40% di sconto: €${over65price}`);
 }
 else{
     console.log (`Il tuo prezzo: €${ticketprice}`)
 }
-
 }) 
