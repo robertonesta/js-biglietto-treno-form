@@ -10,8 +10,9 @@ va applicato uno sconto del 40% per gli over 65.*/
 const submitbutton = document.getElementById("submit");
 
 submitbutton.addEventListener('click', function(){
+    const namesurname = document.getElementById("namesurname")
     const kilometers = Number(document.querySelector('input[name="km"]').value);
-const age = document.getElementById("age").value;
+    const age = document.getElementById("age").value;
 
 let ticketprice = (kilometers * 0.21).toFixed(2);
 console.log (`ticket price: €${ticketprice}`)
@@ -29,4 +30,11 @@ if (age < 18) {
 else{
     console.log (`Il tuo prezzo: €${ticketprice}`)
 }
+
+
+document.getElementById("passenger").innerText = namesurname.value;
+document.getElementById("carriage_number").innerText = Math.floor(Math.random() * 10) + 1;
+document.getElementById("cp_code").innerText = Math.floor(Math.random() * 100000) + 1;
+document.getElementById("ticketprice").innerText = ticketprice.value;
 }) 
+

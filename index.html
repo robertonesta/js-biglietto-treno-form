@@ -10,19 +10,83 @@
 </head>
 <body>
 
-    <div class="container text-center">
-        <input type="text" placeholder="Nome Cognome">
-        <input type="text" name="km" placeholder="Km da percorrere">
-        <select name="age" id="age">
-            <option value="Minorenne">Minorenne (-20%)</option>
-            <option value="Maggiorenne">Maggiorenne</option>
-            <option value="Over_65">Over 65 (-40%)</option>
-        </select>
-        <button id="submit">Genera</button>
-        <button id="reset">Reset</button>
-
-
+    <div class="container text-center my-2">
+        <h2 class="text-uppercase my-2">calcola il prezzo del tuo biglietto</h2>
+        <div class="card">
+            <div class="row my-3 mx-0">
+                <div class="col-4">
+                    <div class="card border-0">
+                        <div class="card_header">Nome Cognome</div>
+                        <div class="card_body">
+                            <input type="text" id="namesurname">
+                        </div>
+                    </div>                                
+                </div>
+                <div class="col-4">
+                    <div class="card border-0">
+                        <div class="card_header">Km da percorrere</div>
+                        <div class="card_body">
+                            <input type="text" name="km">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card border-0">
+                        <div class="card_header">Fascia d'età</div>
+                        <div class="card_body">
+                            <select name="age" id="age">
+                                <option value="Minorenne">Minorenne (-20%)</option>
+                                <option value="Maggiorenne">Maggiorenne</option>
+                                <option value="Over_65">Over 65 (-40%)</option>
+                            </select>                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-4" id="buttons">
+                <button id="submit" class="btn btn-primary mx-2">Genera</button>
+                <button id="reset" class="btn btn-warning mx-2">Annulla</button>
+            </div>
+        </div>
     </div>
+        <div class="container text-center my-2">
+            <h2 class="text-uppercase my-2">il tuo biglietto</h2>
+            <div class="card">
+                <h3 class="text-uppercase my-2 text-start">dettaglio passeggeri</h3>
+                <div class="row mx-0">
+                    <div class="col bg-secondary">
+                        <h5 class="text-uppercase">
+                            nome passeggero
+                        </h5>
+                        <p id="passenger"></p>
+                    </div>
+                    <div class="col">
+                        <h5>Offerta</h5>
+                    </div>
+                    <div class="col">
+                        <h5>
+                            Carrozza
+                        </h5>
+                        <p id="carriage_number"></p>
+                    </div>
+                    <div class="col">
+                        <h5>
+                            Codice CP
+                        </h5>
+                        <p id="cp_code"></p>
+                    </div>
+                    <div class="col">
+                        <h5>
+                            Costo Biglietto
+                        </h5>
+                        <p id="ticketprice"></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="./assets/js/main.js"></script>
