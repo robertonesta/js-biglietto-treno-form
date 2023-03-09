@@ -12,4 +12,10 @@ const submitbutton = document.getElementById("submit");
 submitbutton.addEventListener('click', function(){
     const kilometers = Number(document.querySelector('input[name="km"]').value);
 const userAge = document.getElementById("età").value;
+
+const CostPerKm = 0.21;
+
+let Price = kilometers * CostPerKm;
+
+
 }) 
